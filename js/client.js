@@ -106,7 +106,7 @@ async function main(){
 		//console.log(x[i])
 	}
 
-	const socket= io('http://127.0.0.1:3000',{reconnect: true})
+	const socket= io()
 
 
 socket.on('connect'  ,  ()=>{
