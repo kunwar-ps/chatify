@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		body, *{
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
+			"sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+		}
+		.card{
+			margin:  4% 0 0 10%;
+			font-size: 	1.2em;
+			background: white;
+			display: inline-block;
+			padding: 2%;
+			width: 	30%;
+			box-shadow:  0px 3px 5px 3px rgba(0,0,0,0.3);
+			border-radius: 	10px;
+		}
+
+
+	 	.card #labels{
+	 		margin-bottom: 	5%;
+	 		margin-top: 5%;
+	 	}
+
+		.card button{
+			display: block;
+			width: 100%;
+			margin: 10% 0 5% 0;
+			border: none;
+			outline: none;
+			background: #008069;
+			padding: 2%;
+			border-radius: 5px;
+			font-size: 1em;
+			color:  white;
+			cursor:  pointer;
+		}
+
+		.card input{
+			margin: 	auto;
+			padding: 1%;
+			width: 	98%;
+			font-size: 	0.8em;
+			outline: none;
+			border:  1px solid green;
+  			border-radius: 4px;
+  			margin-bottom: 	3%;
+		}
+
+		.card input:hover{
+			outline:  2px solid green;
+		}
+
+		.card #title{
+			display: 	block	;
+			font-size: 	2em;
+			text-align: center	;
+			margin-bottom: 	10%;
+		}
+
+		#heading{
+			text-align: center;
+			float: right;
+			font-size: 5em;
+			margin-right: 13%;
+			margin-top: 5%;
+		}
+
+
+		#error{
+			font-size: .7em;
+			color:  red;
+		}
+
+	 
+	</style>
+</head>
+<body>
+	<span id="heading">
+  		<span style="color: #008069; font-size: 1.5em; font-weight:   300; "> C</span><span>hati<span style=" font-size:  1.4em; font-weight: 300; color:#008069; text-decoration:  underline ;">fy </span> </span>
+  		<br>
+   		<span style="font-size: 0.5em">Make new friends</span>
+	</span>
+
+		<div class = "card" >
+			<span id = 'title'> Register	</span>
+			<form method="post" action = "/register_auth">	
+					<div id = 'labels'>Username: </div>
+					<input type="text" name="username"> 
+					<span id="error"><%= err.username %></span>
+					<div id= 'labels'>Password: </div>
+					<input type="password" name="password">
+					<span id="error"><%= err.password %></span>
+					<div id = 'labels'>Email: </div> 
+					<input type="email" name="email">
+					<span id= "error"><%= err.email %></span>
+					<button type = "submit" value="submit">Register</button>
+			</form>
+		</div>
+ 
+</body>
+</html>
