@@ -127,7 +127,10 @@ socket.on('connect'  ,  ()=>{
 	socket.on('send_client', data=>{
 		users[data.from].push(data)
 		if(active == data.from)
+		{
 			append(`${data.from}: ${data.data}`, 'left')
+			update_count () ;
+		}
 		else{
 			unseen_count[data.from]+=1;
 			update_count();
