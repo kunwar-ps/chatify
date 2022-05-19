@@ -215,7 +215,7 @@ app.get('/logout', (req, res)=>{
 
 })
 
-httpserver.listen(3000, ()=>console.log("listening on 3000"));
+httpserver.listen(process.env.PORT, ()=>console.log("listening on ", process.env.port));
 
 
 
