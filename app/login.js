@@ -23,7 +23,7 @@ module.exports = function (app) {
 					req.session.username = req.body.username;
 					console.log('success in logging in ',`${req.body.username}` )
 					res.cookie(`username`,  req.body.username);
-					res.render('index', {err: '' } )
+					res.redirect('/' )
 				}
 			})
 		.catch(err=>{
