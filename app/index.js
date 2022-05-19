@@ -67,7 +67,7 @@ app.use(sessionMiddleware)
 
 app.use(cookies());
 app.set('view engine', 'ejs');
-
+app.set('views', path.join(__dirname, '../views'))
 //app.engine('html', require('ejs').renderFile);
 
 const users = {}  // user to socket
