@@ -111,6 +111,12 @@ async function main(){
 
 socket.on('connect'  ,  ()=>{
 
+	socket.on('disconnect', () => {
+		console.log('wait');
+	}); 
+
+
+	console.log('you are online');
 
 
 	socket.on('old-messages', data=>{
