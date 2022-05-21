@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 
+//const url = 'mongodb://localhost:27017/chat_app';
 const url = process.env.MONGODB_URI;
 
 
