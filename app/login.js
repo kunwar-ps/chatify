@@ -14,7 +14,7 @@ module.exports = function (app) {
 				if( doc.length == 0)
 				{
 					console.log('user not found login again')
-					res.render('login', {err: 'Password or Username typed may be incorrect'})
+					res.render('login', {err: 'Password or Username typed may be incorrect. Note: If you are a new user then register before logging in.'})
 				}
 				else{
 					// update online
